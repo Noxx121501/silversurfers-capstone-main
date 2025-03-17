@@ -1,0 +1,284 @@
+.news-feed-grid {
+  column-count: 3;
+  /* Number of masonry columns */
+  column-gap: 20px;
+  /* Space between columns */
+}
+
+.news-feed-grid>div {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 10px;
+  /* Space between items in each column */
+  border: 1px solid #ccc;
+  /* Optional: Border styling */
+  border-radius: 10px;
+  /* Optional: Rounded corners */
+  display: inline-block;
+  /* Ensures items behave like bricks */
+  width: 100%;
+  /* Ensures items fit inside the column */
+  box-sizing: border-box;
+  /* Includes padding in width/height calculations */
+}
+
+.feed-post {
+  height: auto;
+  background-color: white;
+  border-radius: 20px;
+  margin-top: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.post-detail {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+}
+
+.header-self-name {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+.bookmark-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.bookmark-icon {
+  height: 35px;
+  border-radius: 13px;
+  cursor: pointer;
+}
+
+.caption-text {
+  font-size: 35px;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background-color: rgb(230, 230, 230);
+  border-radius: 10px;
+  overflow: clip;
+}
+
+.post-image {
+  max-width: 100%;
+}
+
+.post-caption-container {
+  margin: 10px 0px;
+
+}
+
+
+
+.js-place-time {
+  font-size: 14px;
+}
+
+.like-count {
+  font-weight: bold;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.liked-by-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0px;
+
+}
+
+.liked-by-images {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.image-icon {
+  display: flex;
+  height: 25px;
+  border-radius: 15px;
+  margin: -5px;
+  border-color: white;
+  border-style: solid;
+}
+
+.self-name {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.caption {
+  font-weight: normal;
+}
+
+.reader-count-icon {
+  height: 25px;
+}
+
+.heart-button {
+  border: none;
+  display: flex;
+  padding: 0;
+  border-radius: 20px;
+  background-color: transparent;
+}
+
+.reader-count-container {
+  display: flex;
+  align-items: center;
+}
+
+.reader-count {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.comment-container {
+  background-color: rgb(250, 250, 250);
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  height: 40px;
+}
+
+.comment-box:focus {
+  outline: none;
+  border: none;
+}
+
+.show-comments-container {
+  color: gray;
+  cursor: pointer;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.comment-box {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  background-color: #fafafa;
+  color: #333;
+  font-size: 16px;
+  box-sizing: border-box;
+  border: none;
+  padding: 10px;
+}
+
+.comment-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.comment-item {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.comment-list-container {
+  max-height: 100px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+.send-icon {
+  height: 20px;
+}
+
+.comment-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.comment-button:hover {
+  background-color: rgb(230, 230, 230);
+}
+
+@media (min-width: 400px) and (max-width: 1100px) {
+  .news-feed-grid {
+    column-count: 1;
+  }
+}
+
+@media (min-width: 1100px) and (max-width: 1400px) {
+  .news-feed-grid {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1400px) and (max-width: 1920px) {
+  .news-feed-grid {
+    column-count: 3;
+  }
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Semi-transparent black background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  /* Ensures it appears above other content */
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
+  animation: popIn 0.3s ease-out;
+}
+
+@keyframes popIn {
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

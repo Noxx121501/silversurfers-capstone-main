@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Silver Surfers - Home</title>
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/header.css">
+        <link rel="stylesheet" href="css/news-feed.css">
+    </head>
+    <body>
+      <header class="header">
+        <div class="header-left-section">
+          <div class="header-title">
+            Silver Surfers
+          </div>
+        </div>
+
+        <div class="header-center-section">
+          <img id="open-modal" class="header-add-post-icon" src="/icons/square-plus.svg">
+          <a href="http://127.0.0.1:5500/news-feed.html">
+            <img class="header-home-icon" src="/icons/home.svg">
+          </a>
+          <img class="header-notification-icon" src="/icons/bell.svg">
+          <img class="header-settings-icon" src="/icons/settings.svg">
+        </div>
+
+        <div class="menu-container">
+          <img class="header-menu-icon" src="/icons/menu-burger.svg">
+        </div>
+
+        <div class="header-right-section">
+            <img class="profile-picture-icon" src="/profile-pictures/random-woman-1.jpg" />
+        </div>
+      </header>
+
+      <div class="modal" id="modal-container">
+        <div class="modal-content">
+          <h2>Create a Diary</h2>
+          <input type="file" id="mediaUpload" accept="image/*,video/*">
+          <textarea id="captionInput" placeholder="Write a caption..."></textarea>
+          <button onclick="postMedia()">Post</button>
+          <button class="close-btn" id="close-modal">Close</button>
+        </div>
+      </div>
+
+      <main class="news-feed">
+        <div class="news-feed-grid">
+        </div>
+      </main>
+        
+      <script type="module" src="scripts/news-feed.js"></script>
+    </body>
+  </html>

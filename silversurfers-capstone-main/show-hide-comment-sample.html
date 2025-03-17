@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <style>
+      #commentBox {
+        margin-top: 10px;
+      }
+      #comments {
+        margin-top: 20px;
+      }
+      .comment {
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    
+    <div id="comments" style="display:none;">
+      <div class="comment">Example comment 1</div>
+      <div class="comment">Example comment 2</div>
+      <div class="comment">Example comment 3</div>
+    </div>
+    <button id="viewCommentsButton">View Comments</button>
+    
+
+    <script>
+      const viewCommentsButton = document.getElementById('viewCommentsButton');
+      const comments = document.getElementById('comments');
+
+      // Show/Hide comments on 'View Comments' button click
+      viewCommentsButton.addEventListener('click', () => {
+        if (comments.style.display === 'none' || comments.style.display === '') {
+          comments.style.display = 'block';
+        } else {
+          comments.style.display = 'none';
+        }
+      });
+
+    </script>
+  </body>
+</html>
